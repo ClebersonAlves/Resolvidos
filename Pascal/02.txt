@@ -1,0 +1,78 @@
+var
+codigo1, codigo2, codigo3, codigo4, codigo5: integer;
+qtde1, qtde2, qtde3, qtde4, qtde5: integer;
+qtdeBebida, qtdeLimpeza, qtdeFruta: integer;
+somaBebida, somaLimpeza, somaFruta: real;
+media :real;
+begin
+   qtde1:=0;
+   qtde2:=0;
+   qtde3:=0;
+   qtde4:=0;
+   qtde5:=0;
+
+   write('Digite o codigo:');
+   readln(codigo1);
+   write('Digite o codigo:');
+   readln(codigo2);
+   write('Digite o codigo:');
+   readln(codigo3);
+   write('Digite o codigo:');
+   readln(codigo4);
+   write('Digite o codigo:');
+   readln(codigo5);
+
+   if(codigo1 = 1) then  inc(qtde1);
+   if(codigo1 = 2) then  inc(qtde2);
+   if(codigo1 = 3) then  inc(qtde3);
+   if(codigo1 = 4) then  inc(qtde4);
+   if(codigo1 = 5) then  inc(qtde5);
+
+   if(codigo2 = 1) then  inc(qtde1);
+   if(codigo2 = 2) then  inc(qtde2);
+   if(codigo2 = 3) then  inc(qtde3);
+   if(codigo2 = 4) then  inc(qtde4);
+   if(codigo2 = 5) then  inc(qtde5);
+
+   if(codigo3 = 1) then  inc(qtde1);
+   if(codigo3 = 2) then  inc(qtde2);
+   if(codigo3 = 3) then  inc(qtde3);
+   if(codigo3 = 4) then  inc(qtde4);
+   if(codigo3 = 5) then  inc(qtde5);
+
+   if(codigo4 = 1) then  inc(qtde1);
+   if(codigo4 = 2) then  inc(qtde2);
+   if(codigo4 = 3) then  inc(qtde3);
+   if(codigo4 = 4) then  inc(qtde4);
+   if(codigo4 = 5) then  inc(qtde5);
+
+   if(codigo5 = 1) then  inc(qtde1);
+   if(codigo5 = 2) then  inc(qtde2);
+   if(codigo5 = 3) then  inc(qtde3);
+   if(codigo5 = 4) then  inc(qtde4);
+   if(codigo5 = 5) then  inc(qtde5);
+
+   qtdeBebida  := qtde1 + qtde5;
+   qtdeLimpeza := qtde2 + qtde4;
+   qtdeFruta   := qtde3;
+
+   somaBebida := (qtde1 * 63) + (qtde5 * 7.75);
+   somaLimpeza:= (qtde2 * 25) + (qtde4 * 15);
+   somaFruta  := (qtde3 * 5.70);
+
+   media := (somaBebida + somaLimpeza + somaFruta)/5;
+
+   write('Quantidades:');
+   write(' - Bebidas: ',qtdeBebida);
+   write(' - Limpeza: ',qtdeLimpeza);
+   write(' - Frutas: ',qtdeFruta);
+
+   write('Soma:');
+   write(' - Bebidas: ',somaBebida);
+   write(' - Limpeza: ',somaLimpeza);
+   write(' - Frutas: ',somaFruta);
+
+   write('Media: ',media);
+
+end;
+end.

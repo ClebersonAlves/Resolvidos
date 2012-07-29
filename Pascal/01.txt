@@ -1,0 +1,79 @@
+
+var
+ idade1,idade2,idade3,idade4,idade5 :integer; 
+ media_idade :real;
+ qt_superior,maior,menor :integer;
+
+begin
+
+   qt_superior:=0;
+
+   write('Digite a idade 1:');
+   readln(idade1);
+   maior := idade1;
+   menor := idade1;
+
+   write('Digite a idade 2:');
+   readln(idade2);
+
+   write('Digite a idade 3:');
+   readln(idade3);
+
+   write('Digite a idade 4:');
+   readln(idade4);
+
+   write('Digite a idade 5:');
+   readln(idade5);
+
+
+   media_idade := idade1 + idade2 + idade3 + idade4 + idade5;
+
+
+   if idade2 > 18 then begin
+      qt_superior:=qt_superior+1;
+   end;
+   if idade3 > 18 then begin
+      qt_superior:=qt_superior+1;
+   end;
+   if idade4 > 18 then begin
+      qt_superior:=qt_superior+1;
+   end;
+   if idade5 > 18 then begin
+      qt_superior:=qt_superior+1;
+   end;
+
+
+   if idade2 > maior then begin
+      maior := idade2;
+   end;
+   if idade3 > maior then begin
+      maior := idade3;
+   end;
+   if idade4 > maior then begin
+      maior := idade4;
+   end;
+   if idade5 > maior then begin
+      maior := idade5;
+   end;
+
+   if idade2 < menor then begin
+      menor := idade2;
+   end;
+   if idade3 < menor then begin
+      menor := idade3;
+   end;
+   if idade4 < menor then begin
+      menor := idade4;
+   end;
+   if idade5 < menor then begin
+      menor := idade5;
+   end;
+
+
+   writeln('A média das idade é: ',(media_idade / 5));
+   writeln('A quantidade de pessoas com idade superior a 18 é: ',qt_superior);
+   writeln('A maior idade é: ',maior);
+   writeln('A menor idade é: ',menor);
+
+
+end.
