@@ -1,0 +1,39 @@
+var
+ i, numero: integer;
+ maior, menor, soma, somapar, somaimpar: integer;
+begin
+
+     soma:=0;
+     for i:=0 to 9 do begin
+
+          write('Digite o numero:');
+          readln(numero);
+
+          if(i=0) then begin
+
+             maior:=numero;
+             menor:=numero;
+          end;
+
+
+          if(numero > maior) then maior := numero;
+          if(numero < menor) then menor := numero;
+
+          soma:=soma+numero;
+
+          if(numero mod 2 = 0)then
+             somapar := somapar + numero
+          else
+             somaimpar := somaimpar + numero;
+
+     end;//for
+
+     write('Maior:',maior);
+     write('Menor:',menor);
+     write('Soma:',soma);
+     write('Par:',somapar);
+     write('Impar:',somaimpar);
+
+end;
+
+end.

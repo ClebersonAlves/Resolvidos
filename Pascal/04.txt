@@ -1,0 +1,33 @@
+var
+
+i, idade: integer;
+sexo: string;
+qtdeM, qtdeF, somaM, somaF: integer;
+
+begin
+
+   for i:=0 to 4 do begin
+
+      write('Digite a idade:');
+      readln(idade);
+
+      write('Digite o sexo:');
+      readln(sexo);
+
+      if(sexo = 'M') or (sexo = 'm')then begin
+
+         qtdeM := qtdeM+1;
+         somaM := somaM+idade;
+      end else begin
+         qtdeF:=qtdeF+1;
+         somaF:=somaF+idade;
+      end;
+   end;
+
+   write('Quantidade Masc.:',qtdeM);
+   write('Quantidade Femi.:',qtdeF);
+   write('Soma Masc.:',somaM);
+   write('Soma Femi.:',somaF);
+end;
+
+end.
